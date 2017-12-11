@@ -263,5 +263,125 @@ public class DateUtilTest {
 		Date date = DateUtil.addYears(null, -1);
 		Assert.assertNull(date);
 	}
+	
+	
+	/**
+	 * addMonths testCase
+	 */
+	
+	@Test
+	public void testAddMonths() {
+		Date date = DateUtil.addMonths(new Date(), 1);
+		Assert.assertNotNull(date);
+	}
+	
+	@Test
+	public void testAddMonths2() {
+		Date date = DateUtil.addMonths(null, 1);
+		Assert.assertNull(date);
+	}
+	
+	@Test
+	public void testAddMonths3() {
+		Date date = DateUtil.addMonths(new Date(), 0);
+		Assert.assertNull(date);
+	}
+	
+	@Test
+	public void testAddMonths4() {
+		Date date = DateUtil.addMonths(null, 0);
+		Assert.assertNull(date);
+	}
+	
+	
+	/**
+	 * addDays testCase
+	 */
+	
+	@Test
+	public void testAddDays() {
+		Date date = DateUtil.addDays(new Date(), 1);
+		Assert.assertNotNull(date);
+	}
 
+	@Test
+	public void testAddDays2() {
+		Date date = DateUtil.addDays(null, 1);
+		Assert.assertNull(date);
+	}
+	
+	@Test
+	public void testAddDays3() {
+		Date date = DateUtil.addDays(new Date(), 0);
+		Assert.assertNull(date);
+	}
+	
+	@Test
+	public void testAddDays4() {
+		Date date = DateUtil.addDays(null, 0);
+		Assert.assertNull(date);
+	}
+	
+	
+	/**
+	 * addHours testCase
+	 */
+	
+	@Test
+	public void testAddHours() {
+		Date date = DateUtil.addHours(new Date(), 1);
+		Assert.assertNotNull(date);
+	}
+	
+	@Test
+	public void testAddHours2() {
+		Date date = DateUtil.addHours(null, 1);
+		Assert.assertNull(date);
+	}
+	
+	@Test
+	public void testAddHours3() {
+		Date date = DateUtil.addHours(new Date(), 0);
+		Assert.assertNull(date);
+	}
+	
+	@Test
+	public void testAddHhours4() {
+		Date date = DateUtil.addHours(null, 0);
+		Assert.assertNull(date);
+	}
+	
+	
+	/**
+	 * getHours testCase
+	 */
+	
+	@Test
+	public void testGetHours() {
+		int hour = DateUtil.getHours(new Date());
+		Assert.assertNotEquals(hour, 0);
+	}
+	
+	@Test
+	public void testGetHours2() {
+		int hour = DateUtil.getHours(null);
+		Assert.assertEquals(hour, 0);
+	}
+	
+	
+	/**
+	 * getMinute testCase
+	 */
+	
+	@Test
+	public void testGetMinute() {
+		int miute = DateUtil.getMinute(new Date());
+		Assert.assertNotEquals(miute, 0);
+	}
+	
+	@Test
+	public void testGetMinute2() {
+		int miute = DateUtil.getMinute(null);
+		Assert.assertEquals(miute, 0);
+	}
 }
